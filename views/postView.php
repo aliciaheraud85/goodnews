@@ -25,9 +25,9 @@
                         <div class="col-md-12 pt-3">
                             <h2 class="zxtitre">À la une</h2>
                             <?php foreach($newPost as $new): ?>
-                                <a class="show_lien" href=""><?php echo htmlspecialchars($new['title']); ?></a>
+                                <a class="show_lien" href="index.php?action=show&id=<?php echo htmlspecialchars($new['id']); ?>"><?php echo htmlspecialchars($new['title']); ?></a>
                                 <div class="container-img pb-5">
-                                    <a href=""><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($new['image']); ?>" alt=""></a>
+                                    <a href="index.php?action=show&id=<?php echo htmlspecialchars($new['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($new['image']); ?>" alt=""></a>
                                 </div>
                             <?php endforeach; ?>
                         </div>
