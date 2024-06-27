@@ -8,7 +8,7 @@
 
     try{
         $connexion = new PDO("mysql:localhost=$host;goodnews=$dbname;utf8mb4=$charset", $user, $password);
-        echo "Connexion à la base de donnée réussie.";
+        //echo "Connexion à la base de donnée réussie.";
     }catch(PDOException $e){
         throw new PDOException($e->getMessage(), (int)$e->getCode());
     }

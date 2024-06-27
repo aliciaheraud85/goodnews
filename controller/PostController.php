@@ -12,7 +12,7 @@ require_once(__DIR__. '/../config/autoload.php');
 
         // Mise en place de mon constructeur
 
-        public function __construct($PostModel, $connexion){
+        public function __construct($postModel, $connexion){
             $this -> postModel = $postModel;
             $this-> connexion = $connexion;
         }
