@@ -26,6 +26,19 @@ require_once(__DIR__. '/../config/autoload.php');
                 echo "ERREUR" . $e->getMessage();
             }
         }
+
+        public function show(){
+            try{
+                $onePost = $this->postModel->getOnePost($id);
+                if ($onePost){
+                    include(__DIR__ . './views/readOne.php');
+                }else{
+                    echo "Post non trouvée";
+                }
+            }catch(PDOException $e){
+                echo "Erreur:" . $e->getMessage();
+            }
+        }
     }
 
 ?>
