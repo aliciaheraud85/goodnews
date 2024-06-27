@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./divers/css/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,10 +22,14 @@
             <div class="col-md-3 m-1" style="border: 1px solid black;">
                 <?php if(!empty($newPost)) : ?>
                     <div class="row">
-                        <div class="col-md-12">
-                            <?php foreach($newPost as $new) : ?>
-                                <h4><?php echo htmlspecialchars($new['title']); ?></h4>
-                            <?php endforeach ; ?>
+                        <div class="col-md-12 pt-3">
+                            <h2 class="zxtitre">À la une</h2>
+                            <?php foreach($newPost as $new): ?>
+                                <a class="show_lien" href=""><?php echo htmlspecialchars($new['title']); ?></a>
+                                <div class="container-img pb-5">
+                                    <a href=""><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($new['image']); ?>" alt=""></a>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 <?php else : ?>
