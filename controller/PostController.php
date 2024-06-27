@@ -20,7 +20,7 @@ require_once(__DIR__. '/../config/autoload.php');
         // Déclaration de ma méthode pr mon index
         public function index(){
             try{
-                
+                $latestPost = $this ->postModel->getLatestPost();
             include(__DIR__ . '/../views/postView.php');
             }catch(PDOException $e){
                 echo "ERREUR" . $e->getMessage();
