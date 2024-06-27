@@ -27,11 +27,11 @@ require_once(__DIR__. '/../config/autoload.php');
             }
         }
 
-        public function show(){
+        public function show($id){
             try{
                 $onePost = $this->postModel->getOnePost($id);
                 if ($onePost){
-                    include(__DIR__ . './views/readOne.php');
+                    include(__DIR__ . '/../views/readOne.php');
                 }else{
                     echo "Post non trouvée";
                 }
