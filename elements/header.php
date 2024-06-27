@@ -3,11 +3,8 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-md-11  d-flex justify-content-center">
-                <img class="img-fluid" src="/goodnews/divers/images/logoblanc.png" alt="">
-            </div>
-            <div class="col-md-1">
-                <p>connexion</p>
+            <div class="col-md-12  d-flex justify-content-center" >
+                <img class="img-fluid" src="/goodnews/divers/images/logoblanc.png" alt="logo">
             </div>
         </div>
     </div>
@@ -19,25 +16,31 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse  d-flex justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse spacement" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">ACTUALITÉS</a>
+                    <a class="nav-link ps-5" href="#">ACTUALITÉS</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">POLITIQUE</a>
+                    <a class="nav-link ps-5" href="#">POLITIQUE</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">ÉCONOMIE</a>
+                    <a class="nav-link ps-5" href="#">ÉCONOMIE</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">SPORT</a>
+                    <a class="nav-link ps-5" href="#">SPORT</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">TECHNOLOGIES</a>
+                    <a class="nav-link ps-5" href="#">TECHNOLOGIES</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ps-5" href="#">CULTURE</a>
+                    <a class="nav-link ps-5" href="#">CULTURE</a>
+                </li>
+                <li class="nav-link ps-5">
+                    <p>CONNEXION</p>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-circle-user"></i>
                 </li>
             </ul>
         </div>

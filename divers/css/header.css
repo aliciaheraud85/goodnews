@@ -10,3 +10,8 @@
 .nav-link:hover{
     color: #95969B;
 }
+
+.spacement{
+    display: flex;
+    justify-content: center;
+}
