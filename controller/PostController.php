@@ -2,7 +2,7 @@
 
 //1. APPEL DE L'AUTOLOADER
 
-require_once(__DIR__. '/../config/autload.php');
+require_once(__DIR__. '/../config/autoload.php');
 
 //2.DECLARATION DE MA CLASSE
 
@@ -21,7 +21,7 @@ require_once(__DIR__. '/../config/autload.php');
         public function index(){
             try{
                 
-
+            include(__DIR__ . '/../views/postView.php');
             }catch(PDOException $e){
                 echo "ERREUR" . $e->getMessage();
             }

@@ -1,1 +1,12 @@
- 
+ .footer{
+    background-color: #000;
+ }
+
+ .footer i{
+    color : #95969B;
+ }
+
+ .text{
+    color: #FFF;
+    font-family: 'Poppins'; 
+ }

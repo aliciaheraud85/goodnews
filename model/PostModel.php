@@ -2,7 +2,7 @@
 
     //1. APPEL DE LA CONNEXION ET DE L'AUTOLOADER
 
-    require_once(__DIR__ . '/../config/autoloader.php');
+    require_once(__DIR__ . '/../config/autoload.php');
     require_once(__DIR__ . '/../config/connexion.php');
 
     //2. DECLARATION DE MA CLASSE
