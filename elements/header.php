@@ -37,10 +37,10 @@
                     <a class="nav-link ps-5" href="#">CULTURE</a>
                 </li>
                 <li class="nav-link ps-5">
-                    <p>CONNEXION</p>
+                    <i class="fa-solid fa-circle-user"></i>
                 </li>
                 <li class="nav-link">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <p>CONNEXION</p>
                 </li>
             </ul>
         </div>
