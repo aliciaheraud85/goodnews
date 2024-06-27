@@ -22,6 +22,13 @@
         case 'index' :
             $postController->index();
         break;
+        case 'show' :
+            if(isset($_GET['id']) && is_numeric(($_GET['id']))){
+                $postController->show($_GET['id']);
+            }else{
+                echo "ID invalide.";
+            }
+        break;
         default :
         echo "Page non trouvée";
         break;
