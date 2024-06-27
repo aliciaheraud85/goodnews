@@ -3,7 +3,7 @@
 spl_autoload_register(function ($class_name){
     $paths = [
         __DIR__ . '/../model/',
-        __DIR__ . '/../controller'
+        __DIR__ . '/../controller/'
     ];
     foreach($paths as $path){
         $file = $path . $class_name . '.php';

@@ -16,13 +16,12 @@
             $this->connexion = $connexion;
         }
 
-        public function getLatestPost(){
-            $query = "SELECT * FROM post ORDER BY id DESC LIMIT 9";
+        public function getNewPost(){
+            $query = "SELECT * FROM post ORDER BY id DESC LIMIT 2";
             $stmt = $this->connexion->prepare($query);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-
         
     }
 ?>

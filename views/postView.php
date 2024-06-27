@@ -14,6 +14,31 @@
 
 <?php include(__DIR__ . '/../elements/header.php'); ?>
 
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 m-1" style="border: 1px solid black;">
+                <?php if(!empty($newPost)) : ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php foreach($newPost as $new) : ?>
+                                <h4><?php echo htmlspecialchars($new['title']); ?></h4>
+                            <?php endforeach ; ?>
+                        </div>
+                    </div>
+                <?php else : ?>
+                    <p>Aucun post disponible</p>
+                <?php endif ;?>
+            </div>   
+            <div class="col-md-7 m-1" style="border: 1px solid black;">
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>
+
 <?php include(__DIR__ . '/../elements/footer.php'); ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
