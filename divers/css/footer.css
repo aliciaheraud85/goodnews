@@ -8,5 +8,11 @@
 
  .text{
     color: #FFF;
-    font-family: 'Poppins'; 
+    font-family: 'Poppins';
+    font-size: 0.8em;
+ }
+
+ .logo{
+   width: 200px;
+   height: 100px;
  }

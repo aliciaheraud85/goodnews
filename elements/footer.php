@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img src="/goodnews/divers/images/logonoir.png" alt="">
+                <img class="img-fluid logo" src="/goodnews/divers/images/logonoir.png" alt="logo">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-1">
-    <p class="text">© 2024 Copyright: Goodnews . site réalisé par Alicia Heraud</p>
+    <p class="text">© 2024 Copyright: Goodnews . Site réalisé par Alicia Heraud</p>
   </div>
   <!-- Copyright -->
 </footer> 
