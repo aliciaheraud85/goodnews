@@ -15,7 +15,47 @@
 
 <?php include(__DIR__ . '/../elements/header.php'); ?>
 
-    
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <?php if(!empty($onePost)): ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2><?php echo htmlspecialchars($onePost['title']) ;?></h2>
+                            </div>
+                            <div class="col-md-12">
+                                <h4><?php echo htmlspecialchars($onePost['abstract']) ;?></h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>Par <?php echo htmlspecialchars($onePost['author']); ?></p>
+                            </div>
+                            <div class="col-md-12">
+                                <img class="img-fluid" src="./divers/images/<?php echo htmlspecialchars($onePost['image']) ;?>" alt="image du post">
+                            </div>
+                            <div class="col-md-12">
+                                <p><?php echo htmlspecialchars($onePost['content']); ?></p>
+                            </div>
+                            <?php if(!empty($onePost) && isset($onePost['content2'])) : ?>
+                                <div class="col-md-12">
+                                    <p><?php echo htmlspecialchars($onePost['content2']); ?></p>
+                                </div>
+                            <?php endif; ?>
+                            <div class="col-md-12">
+                                <p>Publié le : <?php echo htmlspecialchars($onePost['createdAt']); ?></p>
+                            </div>
+
+                            
+                        </div>
+                    <?php else : ?>
+                        <p>Aucun post disponible</p>
+                    <?php endif ; ?>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
 
 <?php include(__DIR__ . '/../elements/footer.php'); ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
