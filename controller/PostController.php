@@ -39,6 +39,19 @@ require_once(__DIR__. '/../config/autoload.php');
                 echo "Erreur:" . $e->getMessage();
             }
         }
+
+        public function rubrik($id_rubrik){
+            try{
+                $rubrikPost = $this->postModel->getRubrikPost($id_rubrik);
+                if($rubrikPost){
+                    include(__DIR__ . '/../views/postRubrikView.php');
+                }else{
+                    echo "Posts non trouvés.";
+                }
+            }catch(PDOException $e){
+                echo "ERREUR" . $e->getMessage();
+            }
+        }
     }
 
 ?>
