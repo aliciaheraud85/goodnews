@@ -44,6 +44,7 @@ require_once(__DIR__. '/../config/autoload.php');
             try{
                 $rubrikPost = $this->postModel->getRubrikPost($rubrikName);
                 $postByRubrik = $this->postModel->getPostByRubrik($rubrikName);
+                $latestPostRubrik = $this->postModel->getLatestPostRubrik($rubrikName);
                 if($rubrikPost){
                     include(__DIR__ . '/../views/postRubrikView.php');
                 }else{
