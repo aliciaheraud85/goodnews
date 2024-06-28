@@ -46,15 +46,15 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-4 m-2 postRubrik" style="border: 1px solid black;">
+                        <div class="col-md-4 m-2 postRubrik" style="border: 1px solid black; text-align:justify;">
                             <div class="row">
                             <?php foreach($postByRubrik as $postItem): ;?>
-                                    <div class="col-md-12 pt-3">
+                                    <div class="col-md-12 pb-2">
                                         <h3><a class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><?php echo htmlspecialchars($postItem['title']); ?></a></h3>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 d-flex justify-content-center pb-3" style="border-bottom: 1px solid black;">
                                         <?php if(!empty($postItem['image'])): ?>
-                                            <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><img class="img-fluid containerimg" src="/goodnews/divers/images/<?php echo htmlspecialchars($postItem['image']); ?> " alt="Image du dernier post"></a>
+                                            <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><img class="img-fluid zximg" src="/goodnews/divers/images/<?php echo htmlspecialchars($postItem['image']); ?> " alt="Image du dernier post"></a>
                                         <?php endif; ?>
                                     </div>
                                 <?php endforeach; ?>
