@@ -52,7 +52,7 @@
                                     <div class="col-md-12 pb-2">
                                         <h3><a class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><?php echo htmlspecialchars($postItem['title']); ?></a></h3>
                                     </div>
-                                    <div class="col-md-12 d-flex justify-content-center pb-3" style="border-bottom: 1px solid black;">
+                                    <div class="col-md-12 d-flex justify-content-center pb-3" >
                                         <?php if(!empty($postItem['image'])): ?>
                                             <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><img class="img-fluid zximg" src="/goodnews/divers/images/<?php echo htmlspecialchars($postItem['image']); ?> " alt="Image du dernier post"></a>
                                         <?php endif; ?>
@@ -65,9 +65,24 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-1"></div>
-                            <div class="col-md-10 m-1" style="border: 1px solid black;">
-
+                        <div class="col-md-1 m-1"></div>
+                            <div class="col-md-10 m-2 p-3" style="border: 1px solid black; text-align: justify;">
+                                <div class="row">
+                                    <?php foreach($latestPostRubrik as $latest): ;?>
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h3><a class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($latest['id']); ?>"><?php echo htmlspecialchars($latest['title']); ?></a></h3>
+                                                </div>
+                                                <div class="col-md-12 d-flex justify-content-center pb-3">
+                                                    <?php if(!empty($latest['image'])): ?>
+                                                        <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($latest['id']); ?>"><img class="img-fluid zximg" src="/goodnews/divers/images/<?php echo htmlspecialchars($latest['image']); ?> " alt="Image du dernier post"></a>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>    
+                                </div>
                             </div>
                         <div class="col-md-1"></div>
                     </div>
