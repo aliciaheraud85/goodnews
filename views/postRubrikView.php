@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./divers/css/rubrik.css">
+    <link rel="stylesheet" href="/goodnews/divers/css/rubrik.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,12 +29,15 @@
                             <div class="row">
                                 <?php foreach($rubrikPost as $rubrik): ;?>
                                     <div class="col-md-12">
-                                        <a class="zxtitre" href=""><?php echo htmlspecialchars($rubrik['title']); ?></a>
+                                        <h3><a  class="zxtitre3" href=""><?php echo htmlspecialchars($rubrik['title']); ?></a></h3>
                                     </div>
                                     <div class="col-md-12">
                                         <?php if(!empty($rubrik['image'])): ?>
-                                            <a href=""><img class="img-fluid postImage" src="/goodnews/divers/images/<?php echo htmlspecialchars($rubrik['image']); ?> " alt="Image du dernier post"></a>
+                                            <a href=""><img class="img-fluid" src="/goodnews/divers/images/<?php echo htmlspecialchars($rubrik['image']); ?> " alt="Image du dernier post"></a>
                                         <?php endif; ?>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p><?php echo htmlspecialchars($rubrik['abstract']); ?></p>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
