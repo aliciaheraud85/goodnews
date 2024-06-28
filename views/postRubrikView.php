@@ -19,32 +19,46 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>> Rubrique <?php echo htmlspecialchars($_GET['rubrik']); ?></h4>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 p-3"><h4>> Rubrique <?php echo htmlspecialchars($_GET['rubrik']); ?></h4></div>
+                    </div>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-1"></div>
                         
-                        <div class="col-md-6 ms-1" style="border: 1px solid black;">
+                        <div class="col-md-6 m-2 postRubrik" style="border: 1px solid black; text-align:justify;">
                             <div class="row">
                                 <?php foreach($rubrikPost as $rubrik): ;?>
-                                    <div class="col-md-12">
-                                        <h3><a  class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($rubrik['id']); ?>"><?php echo htmlspecialchars($rubrik['title']); ?></a></h3>
+                                    <div class="col-md-12 p-3">
+                                        <h3><a class="ztitre" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($rubrik['id']); ?>"><?php echo htmlspecialchars($rubrik['title']); ?></a></h3>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 p-3">
                                         <?php if(!empty($rubrik['image'])): ?>
-                                            <a href=""><img class="img-fluid" src="/goodnews/divers/images/<?php echo htmlspecialchars($rubrik['image']); ?> " alt="Image du dernier post"></a>
+                                            <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($rubrik['id']); ?>"><img class="img-fluid containerimg" src="/goodnews/divers/images/<?php echo htmlspecialchars($rubrik['image']); ?> " alt="Image du dernier post"></a>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="col-md-12">
-                                        <p><?php echo htmlspecialchars($rubrik['abstract']); ?></p>
+                                    <div class="col-md-12 p-3">
+                                        <a class="ztitre" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($rubrik['id']); ?>"><p><?php echo htmlspecialchars($rubrik['abstract']); ?></p></a>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                         
-                        <div class="col-md-4 ms-1" style="border: 1px solid black;">
-
+                        <div class="col-md-4 m-2 postRubrik" style="border: 1px solid black;">
+                            <div class="row">
+                            <?php foreach($postByRubrik as $postItem): ;?>
+                                    <div class="col-md-12 pt-3">
+                                        <h3><a class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><?php echo htmlspecialchars($postItem['title']); ?></a></h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?php if(!empty($postItem['image'])): ?>
+                                            <a href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($postItem['id']); ?>"><img class="img-fluid containerimg" src="/goodnews/divers/images/<?php echo htmlspecialchars($postItem['image']); ?> " alt="Image du dernier post"></a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>  
                         </div>
                         <div class="col-md-1"></div>
                     </div>
