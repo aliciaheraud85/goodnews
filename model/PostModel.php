@@ -60,5 +60,20 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getLatestPostRubrik($rubrikName, $offset = 3, $limit = 3){
+            $query = "SELECT post.*, rubrik_name
+            FROM post 
+            JOIN rubrik 
+            ON post.id_rubrik = rubrik.id 
+            WHERE rubrik_name = :rubrik
+            ORDER BY post.id DESC LIMIT :offset, :limit";
+            $stmt = $this->connexion->prepare($query);
+            $stmt->bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 ?>
