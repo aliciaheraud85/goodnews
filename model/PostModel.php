@@ -32,15 +32,16 @@
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
 
-        public function getRubrikPost($rubrikName){
-            $query = "SELECT post.*, rubrik_name 
+        public function getRubrikPost($rubrikName, $limit = 1){
+            $query = "SELECT post.*, rubrik_name
             FROM post 
-            INNER JOIN rubrik 
+            JOIN rubrik 
             ON post.id_rubrik = rubrik.id 
             WHERE rubrik_name = :rubrik
-            ORDER BY post.id DESC";
+            ORDER BY post.id DESC LIMIT :limit";
             $stmt = $this->connexion->prepare($query);
             $stmt->bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
