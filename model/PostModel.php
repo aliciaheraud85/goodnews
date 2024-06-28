@@ -40,7 +40,7 @@
             WHERE rubrik_name = :rubrik
             ORDER BY post.id DESC";
             $stmt = $this->connexion->prepare($query);
-            $stmt = bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
+            $stmt->bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
