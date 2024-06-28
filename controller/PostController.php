@@ -42,7 +42,7 @@ require_once(__DIR__. '/../config/autoload.php');
 
         public function rubrik($rubrikName){
             try{
-                $rubrikPost = $this->postModel->getRubrikPost($id_rubrik);
+                $rubrikPost = $this->postModel->getRubrikPost($rubrikName);
                 if($rubrikPost){
                     include(__DIR__ . '/../views/postRubrikView.php');
                 }else{
