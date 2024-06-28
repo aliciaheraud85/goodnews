@@ -31,5 +31,13 @@
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
+
+        public function getRubrikPost($rubrikName){
+            $query = "SELECT post.*, rubrik_name FROM post INNER JOIN rubrik ON post.id_rubrik = rubrik.id WHERE rubrik_name = :rubrik";
+            $stmt = $this->connexion->prepare($query);
+            $stmt = bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 ?>
