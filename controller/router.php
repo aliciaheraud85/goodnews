@@ -29,6 +29,12 @@
                 echo "ID invalide.";
             }
         break;
+        case 'rubrik' :
+            if(isset($_GET['rubrik'])){
+                $postController->rubrik($_GET['rubrik']);
+            }else{
+                echo "Rubrique non trouvée.";
+            }
         default :
         echo "Page non trouvée";
         break;
