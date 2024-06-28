@@ -1,4 +1,25 @@
+.ztitre{
+    text-decoration: none;
+    color: #000;
+}
+
+.ztitre:hover{
+    color: #95969B;
+}
+
 .zxtitre3{
     text-decoration: none;
     color: #000;
+    font-size: 0.7em;
+}
+
+.zxtitre3:hover{
+    color: #95969B;
+}
+.postRubrik{
+    font-family: "Poppins";
+}
+
+.containerimg:hover{
+    opacity : 0.8;
 }
