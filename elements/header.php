@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12  d-flex justify-content-center" >
-                <a href="index.php"><img class="img-fluid" src="/goodnews/divers/images/logoblanc.png" alt="logo"></a>
+                <a href="/goodnews/index.php"><img class="img-fluid" src="/goodnews/divers/images/logoblanc.png" alt="logo"></a>
             </div>
         </div>
     </div>

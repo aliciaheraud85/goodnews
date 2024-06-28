@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="index.php"><img class="img-fluid logo" src="/goodnews/divers/images/logonoir.png" alt="logo"></a>
+                <a href="/goodnews/index.php"><img class="img-fluid logo" src="/goodnews/divers/images/logonoir.png" alt="logo"></a>
             </div>
         </div>
     </div>
