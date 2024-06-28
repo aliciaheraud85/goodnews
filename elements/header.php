@@ -36,11 +36,11 @@
                 <li class="nav-item">
                     <a class="nav-link ps-5" href="#">CULTURE</a>
                 </li>
-                <li class="nav-link ps-5">
-                    <i class="fa-solid fa-circle-user"></i>
+                <li class="nav-link">
+                    <i class="fa-solid fa-circle-user ps-5"></i>
                 </li>
                 <li class="nav-link">
-                    <p>CONNEXION</p>
+                    <a class="nav-link" href="">CONNEXION</a>
                 </li>
             </ul>
         </div>
