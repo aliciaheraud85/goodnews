@@ -24,11 +24,24 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-1"></div>
+                        
                         <div class="col-md-6 ms-1" style="border: 1px solid black;">
-
+                            <div class="row">
+                                <?php foreach($rubrikPost as $rubrik): ;?>
+                                    <div class="col-md-12">
+                                        <a class="zxtitre" href=""><?php echo htmlspecialchars($rubrik['title']); ?></a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?php if(!empty($rubrik['image'])): ?>
+                                            <a href=""><img class="img-fluid postImage" src="/goodnews/divers/images/<?php echo htmlspecialchars($rubrik['image']); ?> " alt="Image du dernier post"></a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
+                        
                         <div class="col-md-4 ms-1" style="border: 1px solid black;">
-                            
+
                         </div>
                         <div class="col-md-1"></div>
                     </div>
