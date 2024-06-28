@@ -33,7 +33,12 @@
         }
 
         public function getRubrikPost($rubrikName){
-            $query = "SELECT post.*, rubrik_name FROM post INNER JOIN rubrik ON post.id_rubrik = rubrik.id WHERE rubrik_name = :rubrik";
+            $query = "SELECT post.*, rubrik_name 
+            FROM post 
+            INNER JOIN rubrik 
+            ON post.id_rubrik = rubrik.id 
+            WHERE rubrik_name = :rubrik
+            ORDER BY post.id DESC";
             $stmt = $this->connexion->prepare($query);
             $stmt = bindParam(':rubrik', $rubrikName, PDO::PARAM_STR);
             $stmt->execute();
