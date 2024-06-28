@@ -35,6 +35,7 @@
             }else{
                 echo "Rubrique non trouvée.";
             }
+        break;
         default :
         echo "Page non trouvée";
         break;

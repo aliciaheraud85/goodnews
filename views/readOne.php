@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./divers/css/show.css">
+    <link rel="stylesheet" href="/goodnews/divers/css/show.css">
     <title><?php echo htmlspecialchars($onePost['title']); ?></title>
 </head>
 <body>
@@ -32,7 +32,7 @@
                                 <p>Par <?php echo htmlspecialchars($onePost['author']); ?></p>
                             </div>
                             <div class="col-md-12">
-                                <img class="img-fluid" src="./divers/images/<?php echo htmlspecialchars($onePost['image']) ;?>" alt="image du post">
+                                <img class="img-fluid" src="/goodnews/divers/images/<?php echo htmlspecialchars($onePost['image']) ;?>" alt="image du post">
                             </div>
                             <div class="col-md-12">
                                 <p class="content"><?php echo htmlspecialchars($onePost['content']); ?></p>

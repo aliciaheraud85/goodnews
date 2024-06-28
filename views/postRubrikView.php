@@ -29,7 +29,7 @@
                             <div class="row">
                                 <?php foreach($rubrikPost as $rubrik): ;?>
                                     <div class="col-md-12">
-                                        <h3><a  class="zxtitre3" href=""><?php echo htmlspecialchars($rubrik['title']); ?></a></h3>
+                                        <h3><a  class="zxtitre3" href="/goodnews/controller/router.php?action=show&id=<?php echo htmlspecialchars($rubrik['id']); ?>"><?php echo htmlspecialchars($rubrik['title']); ?></a></h3>
                                     </div>
                                     <div class="col-md-12">
                                         <?php if(!empty($rubrik['image'])): ?>
