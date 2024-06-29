@@ -101,6 +101,29 @@
                     <?php else : ?>
                         <p>Aucuns posts disponibles</p>
                     <?php endif ; ?>
+
+                    <!--RUBRIQUE SPORT --> 
+                    
+                    <?php if(!empty($rubrikSport)) : ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="zxtitre2 mt-3">Sport</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($rubrikSport as $sport) : ?>
+                                        <div class="col-md-4">
+                                            <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($sport['id']); ?>"><?php echo htmlspecialchars($sport['title']);?></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($sport['id']); ?>"><img class="img-fluid align-self-center img_lien" src="./divers/images/<?php echo htmlspecialchars($sport['image']); ?>" alt="image du post"></a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <p>Aucuns posts disponibles</p>
+                    <?php endif ; ?>
+
             </div>
             <div class="col-md-1"></div>
         </div>
