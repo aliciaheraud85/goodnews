@@ -28,7 +28,7 @@
                             <h2 class="zxtitre">À la une</h2>
                             <?php foreach($newPost as $new): ?>
                                 <a class="show_lien" href="index.php?action=show&id=<?php echo htmlspecialchars($new['id']); ?>"><?php echo htmlspecialchars($new['title']); ?></a>
-                                <div class="container-img pb-5">
+                                <div class="container-img pb-2">
                                     <a href="index.php?action=show&id=<?php echo htmlspecialchars($new['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($new['image']); ?>" alt=""></a>
                                 </div>
                             <?php endforeach; ?>
