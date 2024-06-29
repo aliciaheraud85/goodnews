@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./divers/css/styles.css">
+    <link rel="stylesheet" href="/goodnews/divers/css/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -37,7 +37,25 @@
                 <?php endif ;?>
             </div>   
             <div class="col-md-7 m-1" style="border: 1px solid black;">
-
+                    <?php if(!empty($rubrikActu)) : ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="zxtitre2 mt-3">Actualités</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($rubrikActu as $actu) : ?>
+                                        <div class="col-md-4">
+                                            <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($actu['id']); ?>"><?php echo htmlspecialchars($actu['title']);?></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($actu['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($actu['image']); ?>" alt=""></a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <p>Aucuns posts disponibles</p>
+                    <?php endif ; ?>
             </div>
             <div class="col-md-1"></div>
         </div>
