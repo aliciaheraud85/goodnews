@@ -15,7 +15,7 @@
         public function __construct($connexion){
             $this->connexion = $connexion;
         }
-
+        //2.2 Methodes vue "postView.php"
         public function getNewPost($limit = 9){
             $query = "SELECT * FROM post ORDER BY id DESC LIMIT :limit";
             $stmt = $this->connexion->prepare($query);
@@ -34,7 +34,30 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getRubrikPolitik($limit = 3, $offset = 1){
+            $query = "SELECT * FROM post 
+            WHERE id_rubrik = 2
+            ORDER BY id DESC LIMIT :offset, :limit";
+            $stmt = $this->connexion->prepare($query);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function getRubrikEco($limit = 3, $offset = 1){
+            $query = "SELECT * FROM post 
+            WHERE id_rubrik = 3
+            ORDER BY id DESC LIMIT :offset, :limit";
+            $stmt = $this->connexion->prepare($query);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         
+        //2.3 Methode vue "readOne.php"
         public function getOnePost($id){
             $query = "SELECT * FROM post WHERE id= :id";
             $stmt = $this->connexion->prepare($query);
@@ -43,6 +66,7 @@
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
 
+        //2.4 Methode vue "postRubrikView.php"
         public function getRubrikPost($rubrikName, $limit = 1){
             $query = "SELECT post.*, rubrik_name
             FROM post 
