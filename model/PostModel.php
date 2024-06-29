@@ -23,6 +23,16 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getRubrikActu($limit = 3){
+            $query = "SELECT * FROM post 
+            WHERE id_rubrik = 1
+            ORDER BY id DESC LIMIT :limit";
+            $stmt = $this->connexion->prepare($query);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         
         public function getOnePost($id){
             $query = "SELECT * FROM post WHERE id= :id";
