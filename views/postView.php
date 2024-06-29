@@ -19,6 +19,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
+
+            <!-- A LA UNE -->
             <div class="col-md-3 m-1" style="border: 1px solid black;">
                 <?php if(!empty($newPost)) : ?>
                     <div class="row">
