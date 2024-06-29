@@ -67,6 +67,17 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getRubrikTech($limit = 3, $offset = 1){
+            $query = "SELECT * FROM post 
+            WHERE id_rubrik = 5
+            ORDER BY id DESC LIMIT :offset, :limit";
+            $stmt = $this->connexion->prepare($query);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         //2.3 Methode vue "readOne.php"
         public function getOnePost($id){
             $query = "SELECT * FROM post WHERE id= :id";
