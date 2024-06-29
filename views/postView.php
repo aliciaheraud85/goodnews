@@ -124,6 +124,29 @@
                         <p>Aucuns posts disponibles</p>
                     <?php endif ; ?>
 
+                    <!--RUBRIQUE TECHNOLOGIES -->
+
+                    <?php if(!empty($rubrikTech)) : ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="zxtitre2 mt-3">Technologies</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($rubrikTech as $tech) : ?>
+                                        <div class="col-md-4">
+                                            <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($tech['id']); ?>"><?php echo htmlspecialchars($tech['title']);?></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($tech['id']); ?>"><img class="img-fluid align-self-center img_lien" src="./divers/images/<?php echo htmlspecialchars($tech['image']); ?>" alt="image du post"></a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <p>Aucuns posts disponibles</p>
+                    <?php endif ; ?>
+
+
             </div>
             <div class="col-md-1"></div>
         </div>
