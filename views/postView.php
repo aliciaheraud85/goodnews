@@ -81,6 +81,26 @@
                     <?php endif ; ?>
 
                    <!--RUBRIQUE POLITIQUE --> 
+
+                   <?php if(!empty($rubrikEco)) : ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="zxtitre2 mt-3">Économie</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($rubrikEco as $eco) : ?>
+                                        <div class="col-md-4">
+                                            <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($eco['id']); ?>"><?php echo htmlspecialchars($eco['title']);?></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($eco['id']); ?>"><img class="img-fluid align-self-center img_lien" src="./divers/images/<?php echo htmlspecialchars($eco['image']); ?>" alt="image du post"></a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <p>Aucuns posts disponibles</p>
+                    <?php endif ; ?>
             </div>
             <div class="col-md-1"></div>
         </div>
