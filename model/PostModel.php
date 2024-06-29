@@ -24,12 +24,13 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function getRubrikActu($limit = 3){
+        public function getRubrikActu($limit = 3, $offset = 1){
             $query = "SELECT * FROM post 
             WHERE id_rubrik = 1
-            ORDER BY id DESC LIMIT :limit";
+            ORDER BY id DESC LIMIT :offset, :limit";
             $stmt = $this->connexion->prepare($query);
             $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
