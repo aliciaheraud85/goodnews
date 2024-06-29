@@ -25,6 +25,8 @@ require_once(__DIR__. '/../config/autoload.php');
                 $rubrikPolitik = $this->postModel->getRubrikPolitik(3);
                 $rubrikEco = $this->postModel->getRubrikEco(3);
                 $rubrikSport = $this->postModel->getRubrikSport(3);
+                $rubrikTech = $this->postModel->getRubrikTech(3);
+
                 include(__DIR__ . '/../views/postView.php');
             }catch(PDOException $e){
                 echo "ERREUR" . $e->getMessage();
