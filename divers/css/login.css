@@ -1,1 +1,31 @@
- 
+.zxtitre{
+    font-size: 3em;
+    text-align: center;
+    padding: 30px;
+}
+
+.zparagraphe{
+    text-align: center;
+}
+.boutton{
+    background-color: #95969B;
+    border: #95969B;
+    width: 300px;
+    padding: 10px;
+    font-size: 1.2em;
+} 
+
+.boutton:hover{
+    background-color: black;
+}
+.form{
+    font-family: "Poppins";
+}
+
+.lien{
+    color: black;
+    text-decoration: none;  
+}
+.lien:hover{
+    text-decoration: underline;
+}
