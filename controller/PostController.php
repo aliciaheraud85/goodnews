@@ -21,6 +21,7 @@ require_once(__DIR__. '/../config/autoload.php');
         public function index(){
             try{
                 $newPost = $this->postModel->getNewPost(9);
+                $rubrikActu = $this->postModel->getRubrikActu(4);
                 include(__DIR__ . '/../views/postView.php');
             }catch(PDOException $e){
                 echo "ERREUR" . $e->getMessage();
