@@ -37,6 +37,7 @@
                 <?php endif ;?>
             </div>   
             <div class="col-md-7 m-1" style="border: 1px solid black;">
+                    <!--RUBRIQUE ACTU -->
                     <?php if(!empty($rubrikActu)) : ?>
                         <div class="row">
                             <div class="col-md-12">
@@ -47,7 +48,7 @@
                                     <?php foreach ($rubrikActu as $actu) : ?>
                                         <div class="col-md-4">
                                             <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($actu['id']); ?>"><?php echo htmlspecialchars($actu['title']);?></a>
-                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($actu['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($actu['image']); ?>" alt=""></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($actu['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($actu['image']); ?>" alt="image du post"></a>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
@@ -56,6 +57,30 @@
                     <?php else : ?>
                         <p>Aucuns posts disponibles</p>
                     <?php endif ; ?>
+
+                    <!--RUBRIQUE POLITIQUE -->
+
+                    <?php if(!empty($rubrikPolitik)) : ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="zxtitre2 mt-3">Politique</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($rubrikPolitik as $pol) : ?>
+                                        <div class="col-md-4">
+                                            <a class="lien" href="index.php?action=show&id=<?php echo htmlspecialchars($pol['id']); ?>"><?php echo htmlspecialchars($pol['title']);?></a>
+                                            <a href="index.php?action=show&id=<?php echo htmlspecialchars($pol['id']); ?>"><img class="img-fluid img_lien" src="./divers/images/<?php echo htmlspecialchars($pol['image']); ?>" alt="image du post"></a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <p>Aucuns posts disponibles</p>
+                    <?php endif ; ?>
+
+                   <!--RUBRIQUE POLITIQUE --> 
             </div>
             <div class="col-md-1"></div>
         </div>
