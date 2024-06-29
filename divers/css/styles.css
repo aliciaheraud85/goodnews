@@ -15,17 +15,26 @@
 .show_lien:hover{
     color: #95969B;
 }
-.img_lien{
-    -webkit-transition: all 0.2s;
-     -moz-transition: all 0.2s;
-     -ms-transition: all 0.2s;
-     -o-transition: all 0.2s;
-     transition: all 0.2s;
-}
+
 .img_lien:hover{
-    transform:scale(1.0);
+    opacity: 0.8;
 }
-.container-img{
-    display:block;
-    overflow:hidden;
+
+
+.zxtitre2{
+    border-bottom:1px solid #95969B;
+    font-family: "Poppins";
+    font-size: 2.5em;
+    padding: 10px;
+}
+
+.lien{
+    text-decoration: none;
+    color:black;
+    font-family: "Poppins";
+    font-size: 0.8em;
+}
+
+.lien:hover{
+    color: #95969B;
 }
