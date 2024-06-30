@@ -19,6 +19,9 @@
         <div class="collapse navbar-collapse spacement" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link ps-5" href="/goodnews/index.php">ACCUEIL</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link ps-5" href="/goodnews/controller/router.php?action=rubrik&rubrik=actualites">ACTUALITÉS</a>
                 </li>
                 <li class="nav-item">
@@ -36,8 +39,8 @@
                 <li class="nav-item">
                     <a class="nav-link ps-5" href="/goodnews/controller/router.php?action=rubrik&rubrik=culture">CULTURE</a>
                 </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-circle-user ps-5"></i>
+                <li class="nav-item">
+                    <a class="nav-link" href="/goodnews/elements/register.php"><i class="fa-solid fa-circle-user ps-5"></i></a>
                 </li>
                 <li class="nav-link">
                     <a class="nav-link" href="/goodnews/elements/login.php">CONNEXION</a>
