@@ -1,7 +1,9 @@
 .zxtitre{
     font-size: 3em;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
 }
 
 .zparagraphe{
