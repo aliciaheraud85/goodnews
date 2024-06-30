@@ -40,7 +40,7 @@
                     <i class="fa-solid fa-circle-user ps-5"></i>
                 </li>
                 <li class="nav-link">
-                    <a class="nav-link" href="">CONNEXION</a>
+                    <a class="nav-link" href="/goodnews/elements/login.php">CONNEXION</a>
                 </li>
             </ul>
         </div>
