@@ -38,7 +38,7 @@
             echo "ERREUR" . $e->getMessage();
         }
 
-
+        $connexion = null;
     }
 
 ?>
