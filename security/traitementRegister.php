@@ -12,7 +12,7 @@
 
         //2.1 ON RECUPERE LES DONNEES DU FORMULAIRE
         $user_name = trim($_POST['user_name']);
-        $lastname = strtroupper(trim($_POST['lastname'])); //strtroupper = tout en MAJ
+        $lastname = strtoupper(trim($_POST['lastname'])); //strtoupper = tout en MAJ
         $firstname = ucfirst(strtolower(trim($_POST['firstname']))); // ucfirst = 1erelettre en MAJ / strtolower = autre lettres en MIN / trim = nettoie pr éviter tt caractère indésirable (protège requêtr SQL)
         $email = trim($_POST['email']);
         
@@ -27,7 +27,7 @@
 
         try{
             $sql = "INSERT INTO users(user_name, lastname, firstname, email, password, city, country, rgpd, role)
-                    VALUES(:user_name, :lastname, :firstname, :email, :password, :city, :country, :rgpd, :role)";
+                    VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = $connexion->prepare($sql);
 
