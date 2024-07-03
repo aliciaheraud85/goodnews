@@ -38,6 +38,8 @@
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
 
+                $_SESSION['LOGGED_USER'] = $user['user_name'];
+
                 header('location: /goodnews/index.php');
                 exit();
             }else{
