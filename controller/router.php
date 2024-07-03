@@ -23,10 +23,17 @@
             $postController->index();
         break;
         case 'show' :
-            if(isset($_GET['id']) && is_numeric(($_GET['id']))){
-                $postController->show($_GET['id']);
+            if(session_start() && isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
+                if(isset($_GET['id']) && is_numeric(($_GET['id']))){
+                    $postController->show($_GET['id']);
+                }else{
+                    echo "ID non valide";
+                }
             }else{
-                echo "ID invalide.";
+                echo "<script language='Javascript'>
+                alert('Veuillez vous connecter pour lire cet article');
+                window.location.assign('/goodnews/elements/login.php');
+                </script>";
             }
         break;
         case 'rubrik' :
