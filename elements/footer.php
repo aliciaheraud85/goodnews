@@ -17,12 +17,10 @@
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body" href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dfr_FR" role="button" data-mdb-ripple-color="dark" target="blank">
             <i class="fa-brands fa-square-facebook fa-2x"></i>
         </a>
-
         <!-- Twitter -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body" href="https://x.com/?lang=fr" target="blank" role="button" data-mdb-ripple-color="dark">
             <i class="fa-brands fa-square-twitter fa-2x"></i>
         </a>
-
         <!-- Instagram -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body" href="https://www.instagram.com/" target="blank" role="button" data-mdb-ripple-color="dark">
             <i class="fa-brands fa-square-instagram fa-2x"></i>
