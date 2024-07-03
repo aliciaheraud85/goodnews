@@ -52,7 +52,7 @@
                         <a class="nav-link" href=""><?php echo $_SESSION['LOGGED_USER'];?></a>
                     </li>
                     <li class="nav-item">
-                        <a href="/goodnews/elements/logout.php">Déconnexion</a>
+                        <a class="nav-link" href="/goodnews/elements/logout.php">Déconnexion</a>
                     </li>
                 <?php endif; ?>
             </ul>
