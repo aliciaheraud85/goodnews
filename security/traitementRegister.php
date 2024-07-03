@@ -17,7 +17,7 @@
         $email = trim($_POST['email']);
         
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $password2 = password_hash($_POST['password2'], PASSWORD_DEFAULT);//Hacher le mot de passe
+        $password2 = $_POST['password2'];//Hacher le mot de passe
 
         $city = ucfirst(strtolower(trim($_POST['city'])));
         $country = trim($_POST['country']);
@@ -27,15 +27,16 @@
         //2.2 REQUETE SQL
 
         try{
-            if($password == $password2){
-                $sql = "INSERT INTO users(user_name, lastname, firstname, email, password, password2, city, country, rgpd, role)
-                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            if($_POST['password'] == $_POST['password2']){
+                $sql = "INSERT INTO users(user_name, lastname, firstname, email, password, city, country, rgpd, role)
+                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                 $stmt = $connexion->prepare($sql);
 
-                $stmt->execute([$user_name, $lastname, $firstname, $email, $password, $password2, $city, $country, $rgpd, $role]);
+                $stmt->execute([$user_name, $lastname, $firstname, $email, $password, $city, $country, $rgpd, $role]);
 
-                echo "Inscription réussie";
+                header('location: /goodnews/elements/login.php');
+                exit();
             }else{
                 echo "Veuillez confirmer le mot de passe correctement.";
             }
