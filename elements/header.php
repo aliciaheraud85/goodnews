@@ -39,12 +39,22 @@
                 <li class="nav-item">
                     <a class="nav-link ps-5" href="/goodnews/controller/router.php?action=rubrik&rubrik=culture">CULTURE</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/goodnews/elements/register.php"><i class="fa-solid fa-circle-user ps-5"></i></a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" href="/goodnews/elements/login.php">CONNEXION</a>
-                </li>
+               
+                    <li class="nav-item">
+                        <a class="nav-link" href="/goodnews/elements/register.php"><i class="fa-solid fa-circle-user ps-5"></i></a>
+                    </li>
+                <?php if(!isset($_SESSION['LOGGED_USER'])) :?>
+                    <li class="nav-link">
+                        <a class="nav-link" href="/goodnews/elements/login.php">CONNEXION</a>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><?php echo $_SESSION['LOGGED_USER'];?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/goodnews/elements/logout.php">Déconnexion</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
