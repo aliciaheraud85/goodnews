@@ -11,7 +11,7 @@
 //3. RECUPERER LES DONNEES DU FORMULAIRE DE CONNEXION
 
     $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : ''; //isset = la variable est défini donc n'est pas null
 
 
     if(empty($email) || empty($password)){   //verifie que les champs du formulaire ne sont pas vides
@@ -43,7 +43,10 @@
                 header('location: /goodnews/index.php');
                 exit();
             }else{
-                echo "Mot de passe incorrect. ";
+                echo "<script language='Javascript'>
+                alert('Mot de passe incorrect. Veuillez ressayer.');
+                window.location.assign('/goodnews/elements/login.php');
+                </script>";
             }
         }else{
             echo "Aucun utilisateur trouvé";
