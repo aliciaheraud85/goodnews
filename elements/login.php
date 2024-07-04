@@ -26,7 +26,7 @@
                     <h2 class="zxtitre">Me connecter</h2>
                 </div>
                 <div class="col-md-12 m-3">
-                    <p class="zparagraphe">Identifiez-vous pour accéder au meilleur de Good News</p>
+                    <p class="zparagraphe">Identifiez-vous pour accéder au meilleur de GoodNews</p>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
