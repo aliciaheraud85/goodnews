@@ -38,7 +38,10 @@
                 header('location: /goodnews/elements/login.php');
                 exit();
             }else{
-                echo "Veuillez confirmer le mot de passe correctement.";
+                echo "<script language='Javascript'>
+                alert('Les mots de passe ne sont pas identiques. Veuillez réessayer.');
+                window.location.assign('/goodnews/elements/register.php');
+                </script>";
             }
         }catch(PDOException $e){
             echo "ERREUR" . $e->getMessage();
