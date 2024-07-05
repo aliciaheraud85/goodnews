@@ -170,9 +170,7 @@
                     <?php else : ?>
                         <p>Aucuns posts disponibles</p>
                     <?php endif ; ?>
-
-
-            </div>
+                </div>
             <div class="col-md-1"></div>
         </div>
     </div>
