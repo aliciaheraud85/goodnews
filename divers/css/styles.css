@@ -1,3 +1,7 @@
+*{
+    font-family: 'Poppins';
+}
+
 .zxtitre{
     text-align: center;
     border-bottom:1px solid #95969B;
@@ -37,4 +41,16 @@
 
 .lien:hover{
     color: #95969B;
+}
+
+.boutton{
+    background-color: #95969B;
+    border: #95969B;
+    width: 300px;
+    padding: 10px;
+    font-size: 1.2em;
+} 
+
+.boutton:hover{
+    background-color: black;
 }
