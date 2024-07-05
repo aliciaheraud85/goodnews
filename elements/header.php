@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/goodnews/elements/modifPassword.php" class="btn btn-secondary">Réinitialiser mon mot de passe</a>
         <a href="/goodnews/elements/modifProfil.php" class="btn btn-secondary">Modifier mes informations</a>
       </div>
     </div>
