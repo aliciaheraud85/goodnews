@@ -37,7 +37,10 @@
             if(password_verify($password, $user['password'])){
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-
+                $_SESSION['lastname'] = $user['lastname'];
+                $_SESSION['firstname'] = $user['firstname'];
+                $_SESSION['city'] = $user['city'];
+                $_SESSION['country'] = $user['country'];
                 $_SESSION['LOGGED_USER'] = $user['user_name'];
 
                 header('location: /goodnews/index.php');
