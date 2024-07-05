@@ -49,7 +49,7 @@
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><?php echo $_SESSION['LOGGED_USER'];?></a>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" ><?php echo $_SESSION['LOGGED_USER'];?></button>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/goodnews/elements/logout.php">Déconnexion</a>
@@ -59,3 +59,41 @@
         </div>
     </div>
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 " id="exampleModalLabel">Mon compte</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12">
+            <p>Nom d'utilisateur : <?php echo $_SESSION['LOGGED_USER']; ?></p>
+        </div>
+        <div class="col-md-12">
+            <p>NOM : <?php echo $_SESSION['lastname']; ?></p>
+        </div>
+        <div class="col-md-12">
+            <p>Prénom : <?php echo $_SESSION['firstname']; ?></p>
+        </div>
+        <div class="col-md-12">
+            <p>Adresse email : <?php echo $_SESSION['email']; ?></p>
+        </div>
+        <div class="col-md-12">
+            <p>Ville : <?php echo $_SESSION['city']; ?></p>
+        </div>
+        <div class="col-md-12">
+            <p>Country : <?php echo $_SESSION['country']; ?></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/goodnews/elements/modifProfil.php" class="btn btn-secondary">Modifier mes informations</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/goodnews/divers/js/styles.js"></script>
